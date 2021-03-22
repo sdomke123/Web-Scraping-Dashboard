@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../static/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <title>Mars Information</title>
+    </head>
+
+    <header class="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Mars Information</h1>
+                        <p><a class="btn btn-primary btn-lg" href="http://127.0.0.1:5000/scrape" role="button">Get New Info</a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <body>
+        <br>
+        <div class="container">
+            <div class = "row">
+                <div class="col-md-12">
+                    <h2>Latest News</h2>
+                    <h4>{{ mars.latest_title }}</h4>
+                    <h5>{{ mars.latest_paragraph }}</h5>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class = "row">
+                <div class="col-8">
+                    <h2>Latest Featured Image</h2>
+                    <img src="{{ mars.featured_image }}">
+                </div>
+            <div class="col-4">
+                <h4>Mars Facts</h4>
+                {{ mars.mars_facts_table|safe }}
+            </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <br>
+
+                <h2 class="text-center">Mars Hemispheres</h2>
+                <hr>
+                {% for dict in mars.hemispheres %}
+                    <div class="col-6">
+                        <div class="card text-center" style="padding-top: 10px">
+                            <img class="card-img-top text-center" src="{{ dict.full_img }}">
+                                <div class="card-body text center">
+                                    <h4 class="card-title text-center">{{ dict.title }}</h4>
+                                </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+
+    </body>
+    
+
+
+</html>

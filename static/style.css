@@ -1,0 +1,17 @@
+.masthead {
+    height: 30vh;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 30px;
+    background: #ebecf1
+}
+
+.col-12 {
+    padding-top: 30px
+}
+
+.button {
+    background-color: rgb(21, 89, 214);
+    color: white;
+    text-align: center
+}
