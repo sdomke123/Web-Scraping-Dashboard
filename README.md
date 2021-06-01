@@ -13,9 +13,9 @@ The original scraping done in Jupyter Notebook was then converted to a python sc
 
 An HTML template was created to display the scraped information on localhost in the desired manner.
 
-![final1](Images/final1.png)
+![final1](images/final1.png)
 
-![final2](Images/final2.png)
+![final2](images/final2.png)
 
 ## Data
 
